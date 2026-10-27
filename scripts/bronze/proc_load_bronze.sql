@@ -1,8 +1,12 @@
 /*
-=======================================
-
-
-
+=====================================================================================================================
+Script Purpose:
+  This script is to load data into 'bronze' schema from external CSV files.
+  It performs the following actionsL
+  1. Load data into 'bronze' tables.
+  2. Calculate loading duration for each schema and total load duraiton.
+=====================================================================================================================
+/*
 
 SELECT '------------------' AS message;
 SELECT 'Loading CRM Tables' AS message;

@@ -3,17 +3,16 @@
 DDL Script: Create Bronze Tables
 =================================================================================================================================
 Script Purpose:
-  This script creates tables in the 'bronze' schema, dropping existing bronze tables if they already exisit.
-  Run this script to re-define the DDL structure of 'bronze' Tables
+  -This script creates tables in the 'bronze' schema, dropping existing bronze tables if they already exisit.
+  -Run this script to re-define the DDL structure of 'bronze' Tables.
+  -Store this as loading bronze procedure.
+Parameters:
+	None.
+	This stored procedure does not accept any parameters or return any values.
+Usage example:
+	Call bronze.load_bronze();
 =================================================================================================================================
 /*
-
-DROP DATABASE IF EXISTS bronze;
-CREATE database bronze; 
-DROP DATABASE IF EXISTS silver;
-CREATE database IF NOT EXISTS silver; 
-DROP DATABASE IF EXISTS gold;
-CREATE database IF NOT EXISTS gold; 
 
 DELIMITER $$
 DROP PROCEDURE IF EXISTS bronze.load_bronze $$
@@ -86,5 +85,3 @@ BEGIN
 
 END $$
 DELIMITER ;
-
-Call bronze.load_bronze();
